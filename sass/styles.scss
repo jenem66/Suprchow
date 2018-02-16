@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Open-sans');
+// STYLES
+// fonts
+$font-primary: 'Montserrat',
+'Arial',
+sans-serif;
+$font-body: 'Lato',
+'Arial',
+sans-serif;
+$color-primary: #599c52;
+$color-secondary: #DE8D4C;
+$color-primary-text: #636363;
+$color-favorite: #F22F59;
+$color-rating: #EFA127;
+$dark-gray: #1f1e23;
+// GLOBAL
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;
+    /* Firefox, other Gecko */
+    box-sizing: border-box;
+    /* Opera/IE 8+ */
+}
+
+html,
+body {
+    background: #5B5B5C url(../images/coffee-header-bg.jpg) center no-repeat;
+    background-size: cover;
+    height: 100%;
+    font-family: $font-primary;
+    color: $color-primary-text;
+}
+
+.container {
+    margin: 0 auto;
+    width: 1140px;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+}
+
+// buttons
+.btn {
+    font-size: 1rem;
+    font-weight: 200;
+    padding: 10px 30px;
+    border-radius: 3px;
+    transition: .3s;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    & a {
+        color: #fff;
+    }
+}
+
+.btn-primary {
+    background: $color-primary;
+    &:hover {
+        background: saturate($color-primary, 10%)
+    }
+}
+
+.btn-secondary {
+    background: $color-secondary;
+    &:hover {
+        background: saturate($color-secondary, 10%)
+    }
+}
+
+//NAVIGATION
+nav {
+    display: flex;
+    color: #fff;
+    padding: 32px;
+    font-size: .8rem;
+    & .logo {
+        margin-right: auto;
+    }
+    & ul li {
+        display: inline;
+        margin-left: 20px;
+        & a {
+            color: #fff;
+        }
+    }
+    & .sign-up-btn {
+        border: 1px solid #fff;
+        padding: 8px 22px;
+        border-radius: 3px;
+        transition: .3s;
+        &:hover {
+            background: rgba(255, 255, 255, .1);
+        }
+    }
+}
+
+// SEARCH SECTION
+.search,
+.filter-categories {
+    color: #fff;
+    text-align: center;
+}
+
+
+.search {
+    color: #fff;
+    text-align: center;
+    & h1 {
+        margin: 120px 0 8px 0;
+        font-size: 2.5rem;
+    }
+    & p {
+        margin-bottom: 32px;
+        font-size: 1.2rem;
+        font-weight: 200;
+    }
+    & form{
+
+        input[type="text"]{
+            font-size: 1.2rem;
+            font-weight: 200;
+            padding: 10px;
+            border-radius: 3px;
+            border: none;
+            width: 500px;
+            outline: none;
+
+            &:placeholder{
+                opacity: .3;
+            }
+        }
+        button{
+            color: #fff;
+            font-size: 1rem;
+        }
+    }
+}
+
+.filter-categories {
+    & .location {
+        text-transform: uppercase;
+        font-size: 1rem;
+        font-weight: 200;
+        letter-spacing: .13rem;
+        margin: 100px 0 16px 0;
+    }
+    & .tab-categories {
+        & ul {
+            margin-bottom: 40px;
+        }
+        & ul li {
+            display: inline-block;
+            font-size: .9rem;
+
+        }
+        & a {
+            color: #fff;
+            padding: 16px;
+        }
+        .active{
+            border-bottom: 2px solid #fff;
+            padding-bottom: 10px;
+        }
+        // & .active::after {
+        //     content: "";
+        //     display: block;
+        //     height: 2px;
+        //     width: 100%;
+        //     background: #fff;
+        //     margin-top: 8px;
+        // }
+    }
+}
+
+// FEATURED SECTION
+.featured-listings {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    & .btn-primary {
+        margin-top: 24px;
+        display: block;
+    }
+}
+
+// RESTAURANT CARD LISTING ITEM
+
+.restaurant-card {
+    background: #fff;
+    height: 300px;
+    border-radius: 10px;
+    text-align: center;
+    -webkit-box-shadow: 0px 15px 88px -37px rgba(0, 0, 0, 0.17);
+    -moz-box-shadow: 0px 15px 88px -37px rgba(0, 0, 0, 0.17);
+    box-shadow: 0px 15px 88px -37px rgba(0, 0, 0, 0.17);
+    overflow: hidden;
+}
+
+.card-body {
+    & h1{
+        font-size: 1.1rem;
+        line-height: 1.1rem;
+        margin-bottom: 8px;
+        color: $color-primary-text;
+    }
+    
+    & a {
+        color: $color-primary-text;
+    }
+}
+
+.card-header {
+    height: 50%;
+    background: #000 url(http://res.cloudinary.com/jenelle-miller/image/upload/v1518632582/tupelo-cafe_a7buc9.png) center no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.favorite-btn {
+    width: 50px;
+    height: 50px;
+    color: #fff;
+    border-radius: 50%;
+    position: relative;
+    top: 124px;
+    left: 24px;
+    border: 2px solid #fff;
+    background: $color-favorite;
+    padding-top: 15px;
+    text-align: center;
+    vertical-align: center;
+    transition: .3s;
+    &:hover {
+        background: saturate($color-favorite, 25%);
+        cursor: pointer;
+    }
+}
+
+.card-body {
+    padding: 24px;
+    font-family: $font-body;
+    font-size: .9rem;
+}
+
+.rating ul {
+    padding: 10px;
+}
+
+.rating li {
+    display: inline;
+    color: $color-rating;
+    &:hover {
+        color: saturate($color-rating, 25%);
+        cursor: pointer;
+    }
+}
+
+
+// FOOTER
+footer {
+    background: $dark-gray;
+    color: rgba(255, 255, 255, .3);
+    font-size: .8rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 32px;
+    & .footer-col {
+        & h4 {
+            color: #fff;
+            font-size: .9rem;
+            margin-bottom: 12px;
+        }
+        & li {
+            list-style: none;
+            margin-bottom: 8px;
+        }
+    }
+    & .copywrite {
+        display: block;
+    }
+}
