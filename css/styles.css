@@ -50,6 +50,15 @@ p {
   .btn-secondary:hover {
     background: #e98c41; }
 
+.ghost-btn {
+  border: 1px solid #fff;
+  padding: 8px 22px;
+  border-radius: 3px;
+  -webkit-transition: .3s;
+  transition: .3s; }
+  .ghost-btn:hover {
+    background: rgba(255, 255, 255, 0.1); }
+
 nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -64,14 +73,6 @@ nav {
     margin-left: 20px; }
     nav ul li a {
       color: #fff; }
-  nav .sign-up-btn {
-    border: 1px solid #fff;
-    padding: 8px 22px;
-    border-radius: 3px;
-    -webkit-transition: .3s;
-    transition: .3s; }
-    nav .sign-up-btn:hover {
-      background: rgba(255, 255, 255, 0.1); }
 
 .search,
 .filter-categories {
@@ -203,7 +204,11 @@ footer {
           justify-content: space-between;
   padding: 32px; }
   footer a {
-    color: rgba(255, 255, 255, 0.3); }
+    color: #636363;
+    -webkit-transition: .3s;
+    transition: .3s; }
+    footer a:hover {
+      color: #898989; }
   footer .footer-col h4 {
     color: #fff;
     font-size: .9rem;

@@ -77,6 +77,16 @@ p {
     }
 }
 
+.ghost-btn {
+    border: 1px solid #fff;
+    padding: 8px 22px;
+    border-radius: 3px;
+    transition: .3s;
+    &:hover {
+        background: rgba(255, 255, 255, .1);
+    }
+}
+
 //NAVIGATION
 nav {
     display: flex;
@@ -93,16 +103,8 @@ nav {
             color: #fff;
         }
     }
-    & .sign-up-btn {
-        border: 1px solid #fff;
-        padding: 8px 22px;
-        border-radius: 3px;
-        transition: .3s;
-        &:hover {
-            background: rgba(255, 255, 255, .1);
-        }
-    }
 }
+
 
 // SEARCH SECTION
 .search,
@@ -275,7 +277,12 @@ footer {
     justify-content: space-between;
     padding: 32px;
     & a{
-        color: rgba(255, 255, 255, .3);
+        color: $color-primary-text;
+        transition: .3s;
+
+        &:hover{
+            color: lighten($color-primary-text,15%);
+        }
     }
     & .footer-col {
         & h4 {
