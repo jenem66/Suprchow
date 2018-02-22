@@ -121,6 +121,11 @@ nav {
   border-bottom: 2px solid #fff;
   padding-bottom: 10px; }
 
+.featured-listings .btn.btn-primary {
+  text-align: center;
+  width: 150px;
+  margin: 0 auto; }
+
 .card-listings {
   height: 100%;
   display: -webkit-box;
@@ -131,10 +136,8 @@ nav {
           align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
-          justify-content: space-between; }
-  .card-listings .btn-primary {
-    margin-top: 24px;
-    display: block; }
+          justify-content: space-between;
+  margin-bottom: 32px; }
 
 .restaurant-card {
   background: #fff;
@@ -197,6 +200,7 @@ nav {
 
 footer {
   background: #1f1e23;
+  margin-top: 40px;
   font-size: .8rem;
   display: -webkit-box;
   display: -ms-flexbox;

@@ -184,15 +184,21 @@ nav {
 }
 
 // FEATURED SECTION
+
+.featured-listings{
+    & .btn.btn-primary {
+        text-align: center;
+        width: 150px;
+        margin: 0 auto;
+    }
+}
+
 .card-listings {
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    & .btn-primary {
-        margin-top: 24px;
-        display: block;
-    }
+    margin-bottom: 32px;
 }
 
 // RESTAURANT CARD LISTING ITEM
@@ -273,6 +279,7 @@ nav {
 // FOOTER
 footer {
     background: $dark-gray;
+    margin-top: 40px;
     font-size: .8rem;
     display: flex;
     flex-flow: row;
