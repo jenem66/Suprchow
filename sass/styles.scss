@@ -28,7 +28,7 @@ $dark-gray: #1f1e23;
 
 html,
 body {
-    background: #5B5B5C url(../images/coffee-header-bg.jpg) center no-repeat;
+    background: #1F1E23 url(../images/coffee-header-bg.jpg) center no-repeat;
     background-size: cover;
     height: 100%;
     font-family: $font-primary;
@@ -37,7 +37,7 @@ body {
 
 .container {
     margin: 0 auto;
-    width: 1140px;
+    max-width: 1140px;
 }
 
 a {
@@ -51,15 +51,19 @@ p {
 // buttons
 .btn {
     font-size: 1rem;
+    line-height: 1.1rem;
+    font-family: $font-body;
     font-weight: 200;
     padding: 10px 30px;
     border-radius: 3px;
     transition: .3s;
     border: none;
     outline: none;
-    cursor: pointer;
     & a {
         color: #fff;
+    }
+    &:hover{
+        cursor: pointer;
     }
 }
 
@@ -74,6 +78,15 @@ p {
     background: $color-secondary;
     &:hover {
         background: saturate($color-secondary, 10%)
+    }
+}
+
+.ghost-btn {
+    border: 1px solid #fff;
+    background: rgba(255, 255, 255, 0);
+    color: #fff;
+    &:hover {
+        background: rgba(255, 255, 255, .1);
     }
 }
 
@@ -93,16 +106,12 @@ nav {
             color: #fff;
         }
     }
-    & .sign-up-btn {
-        border: 1px solid #fff;
+    & .ghost-btn {
+        font-size: .8rem;
         padding: 8px 22px;
-        border-radius: 3px;
-        transition: .3s;
-        &:hover {
-            background: rgba(255, 255, 255, .1);
-        }
     }
 }
+
 
 // SEARCH SECTION
 .search,
@@ -110,7 +119,6 @@ nav {
     color: #fff;
     text-align: center;
 }
-
 
 .search {
     color: #fff;
@@ -183,31 +191,52 @@ nav {
 }
 
 // FEATURED SECTION
-.featured-listings {
+
+.featured-listings{
+    & .btn.btn-primary {
+        text-align: center;
+        width: 150px;
+        margin: 0 auto;
+    }
+}
+
+.card-listings {
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    & .btn-primary {
-        margin-top: 24px;
-        display: block;
-    }
+    margin-bottom: 32px;
 }
 
 // RESTAURANT CARD LISTING ITEM
 
 .restaurant-card {
     background: #fff;
+    width: 32%;
     height: 300px;
     border-radius: 10px;
     text-align: center;
     -webkit-box-shadow: 0px 15px 88px -37px rgba(0, 0, 0, 0.17);
     -moz-box-shadow: 0px 15px 88px -37px rgba(0, 0, 0, 0.17);
     box-shadow: 0px 15px 88px -37px rgba(0, 0, 0, 0.17);
+
+}
+
+.card-header {
+    height: 50%;
+    background: #000 center no-repeat;
     overflow: hidden;
+    img{
+        width: 100%;
+        background-size: cover;
+    }
 }
 
 .card-body {
+    padding: 24px;
+    font-family: $font-body;
+    font-size: .9rem;
+    position: relative;
     & h1{
         font-size: 1.1rem;
         line-height: 1.1rem;
@@ -220,20 +249,13 @@ nav {
     }
 }
 
-.card-header {
-    height: 50%;
-    background: #000 url(http://res.cloudinary.com/jenelle-miller/image/upload/v1518632582/tupelo-cafe_a7buc9.png) center no-repeat;
-    background-size: cover;
-    position: relative;
-}
-
 .favorite-btn {
     width: 50px;
     height: 50px;
     color: #fff;
     border-radius: 50%;
-    position: relative;
-    top: 124px;
+    position: absolute;
+    top: -26px;
     left: 24px;
     border: 2px solid #fff;
     background: $color-favorite;
@@ -245,12 +267,6 @@ nav {
         background: saturate($color-favorite, 25%);
         cursor: pointer;
     }
-}
-
-.card-body {
-    padding: 24px;
-    font-family: $font-body;
-    font-size: .9rem;
 }
 
 .rating ul {
@@ -270,11 +286,23 @@ nav {
 // FOOTER
 footer {
     background: $dark-gray;
-    color: rgba(255, 255, 255, .3);
+    margin-top: 40px;
     font-size: .8rem;
-    display: flex;
-    justify-content: space-between;
     padding: 32px;
+    & .footer-links{
+        display: block;
+        display: flex;
+        flex-flow: row;
+        justify-content: space-between;
+    }
+    & a{
+        color: $color-primary-text;
+        transition: .3s;
+
+        &:hover{
+            color: lighten($color-primary-text,15%);
+        }
+    }
     & .footer-col {
         & h4 {
             color: #fff;
@@ -285,8 +313,48 @@ footer {
             list-style: none;
             margin-bottom: 8px;
         }
+
+        & .social ul li {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: gray;
+
+        }
+        & .newsletter{
+            flex-grow: 2;
+        }
+        & button.btn.ghost-btn{
+            border-color: rgba(255, 255, 255, 0.3);
+            font-size: .8rem;
+
+        }
+        & input[type="text"]{
+            font-size: 1rem;
+            color: #fff;
+            border: 1px solid rgb(255, 255, 255);
+            font-weight: 200;
+            padding: 9px;
+            border-radius: 3px;
+            border: none;
+            width: 350px;
+            outline: none;
+            background: rgba(255, 255, 255, 0.05);
+
+            &:focus{
+                border: 1px solid rgba(255, 255, 255, 0.3);
+            }
+
+            &:placeholder{
+                opacity: .3;
+            }
+        }
     }
     & .copywrite {
         display: block;
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+        padding-top: 32px;
+        margin-top: 24px;
     }
-}
+} 

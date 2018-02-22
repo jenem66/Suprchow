@@ -11,7 +11,7 @@
 
 html,
 body {
-  background: #5B5B5C url(../images/coffee-header-bg.jpg) center no-repeat;
+  background: #1F1E23 url(../images/coffee-header-bg.jpg) center no-repeat;
   background-size: cover;
   height: 100%;
   font-family: "Montserrat", "Arial", sans-serif;
@@ -19,7 +19,7 @@ body {
 
 .container {
   margin: 0 auto;
-  width: 1140px; }
+  max-width: 1140px; }
 
 a {
   text-decoration: none; }
@@ -29,16 +29,19 @@ p {
 
 .btn {
   font-size: 1rem;
+  line-height: 1.1rem;
+  font-family: "Lato", "Arial", sans-serif;
   font-weight: 200;
   padding: 10px 30px;
   border-radius: 3px;
   -webkit-transition: .3s;
   transition: .3s;
   border: none;
-  outline: none;
-  cursor: pointer; }
+  outline: none; }
   .btn a {
     color: #fff; }
+  .btn:hover {
+    cursor: pointer; }
 
 .btn-primary {
   background: #599c52; }
@@ -49,6 +52,13 @@ p {
   background: #DE8D4C; }
   .btn-secondary:hover {
     background: #e98c41; }
+
+.ghost-btn {
+  border: 1px solid #fff;
+  background: rgba(255, 255, 255, 0);
+  color: #fff; }
+  .ghost-btn:hover {
+    background: rgba(255, 255, 255, 0.1); }
 
 nav {
   display: -webkit-box;
@@ -64,14 +74,9 @@ nav {
     margin-left: 20px; }
     nav ul li a {
       color: #fff; }
-  nav .sign-up-btn {
-    border: 1px solid #fff;
-    padding: 8px 22px;
-    border-radius: 3px;
-    -webkit-transition: .3s;
-    transition: .3s; }
-    nav .sign-up-btn:hover {
-      background: rgba(255, 255, 255, 0.1); }
+  nav .ghost-btn {
+    font-size: .8rem;
+    padding: 8px 22px; }
 
 .search,
 .filter-categories {
@@ -120,7 +125,12 @@ nav {
   border-bottom: 2px solid #fff;
   padding-bottom: 10px; }
 
-.featured-listings {
+.featured-listings .btn.btn-primary {
+  text-align: center;
+  width: 150px;
+  margin: 0 auto; }
+
+.card-listings {
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -130,41 +140,46 @@ nav {
           align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
-          justify-content: space-between; }
-  .featured-listings .btn-primary {
-    margin-top: 24px;
-    display: block; }
+          justify-content: space-between;
+  margin-bottom: 32px; }
 
 .restaurant-card {
   background: #fff;
+  width: 32%;
   height: 300px;
   border-radius: 10px;
   text-align: center;
   -webkit-box-shadow: 0px 15px 88px -37px rgba(0, 0, 0, 0.17);
-  box-shadow: 0px 15px 88px -37px rgba(0, 0, 0, 0.17);
-  overflow: hidden; }
-
-.card-body h1 {
-  font-size: 1.1rem;
-  line-height: 1.1rem;
-  margin-bottom: 8px;
-  color: #636363; }
-.card-body a {
-  color: #636363; }
+  box-shadow: 0px 15px 88px -37px rgba(0, 0, 0, 0.17); }
 
 .card-header {
   height: 50%;
-  background: #000 url(http://res.cloudinary.com/jenelle-miller/image/upload/v1518632582/tupelo-cafe_a7buc9.png) center no-repeat;
-  background-size: cover;
+  background: #000 center no-repeat;
+  overflow: hidden; }
+  .card-header img {
+    width: 100%;
+    background-size: cover; }
+
+.card-body {
+  padding: 24px;
+  font-family: "Lato", "Arial", sans-serif;
+  font-size: .9rem;
   position: relative; }
+  .card-body h1 {
+    font-size: 1.1rem;
+    line-height: 1.1rem;
+    margin-bottom: 8px;
+    color: #636363; }
+  .card-body a {
+    color: #636363; }
 
 .favorite-btn {
   width: 50px;
   height: 50px;
   color: #fff;
   border-radius: 50%;
-  position: relative;
-  top: 124px;
+  position: absolute;
+  top: -26px;
   left: 24px;
   border: 2px solid #fff;
   background: #F22F59;
@@ -176,11 +191,6 @@ nav {
   .favorite-btn:hover {
     background: #ff2252;
     cursor: pointer; }
-
-.card-body {
-  padding: 24px;
-  font-family: "Lato", "Arial", sans-serif;
-  font-size: .9rem; }
 
 .rating ul {
   padding: 10px; }
@@ -194,15 +204,27 @@ nav {
 
 footer {
   background: #1f1e23;
-  color: rgba(255, 255, 255, 0.3);
+  margin-top: 40px;
   font-size: .8rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   padding: 32px; }
+  footer .footer-links {
+    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+  footer a {
+    color: #636363;
+    -webkit-transition: .3s;
+    transition: .3s; }
+    footer a:hover {
+      color: #898989; }
   footer .footer-col h4 {
     color: #fff;
     font-size: .9rem;
@@ -210,7 +232,38 @@ footer {
   footer .footer-col li {
     list-style: none;
     margin-bottom: 8px; }
+  footer .footer-col .social ul li {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: gray; }
+  footer .footer-col .newsletter {
+    -webkit-box-flex: 2;
+        -ms-flex-positive: 2;
+            flex-grow: 2; }
+  footer .footer-col button.btn.ghost-btn {
+    border-color: rgba(255, 255, 255, 0.3);
+    font-size: .8rem; }
+  footer .footer-col input[type="text"] {
+    font-size: 1rem;
+    color: #fff;
+    border: 1px solid white;
+    font-weight: 200;
+    padding: 9px;
+    border-radius: 3px;
+    border: none;
+    width: 350px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.05); }
+    footer .footer-col input[type="text"]:focus {
+      border: 1px solid rgba(255, 255, 255, 0.3); }
+    footer .footer-col input[type="text"]:placeholder {
+      opacity: .3; }
   footer .copywrite {
-    display: block; }
+    display: block;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 32px;
+    margin-top: 24px; }
 
 /*# sourceMappingURL=styles.css.map */
