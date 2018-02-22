@@ -51,15 +51,19 @@ p {
 // buttons
 .btn {
     font-size: 1rem;
+    line-height: 1.1rem;
+    font-family: $font-body;
     font-weight: 200;
     padding: 10px 30px;
     border-radius: 3px;
     transition: .3s;
     border: none;
     outline: none;
-    cursor: pointer;
     & a {
         color: #fff;
+    }
+    &:hover{
+        cursor: pointer;
     }
 }
 
@@ -79,9 +83,8 @@ p {
 
 .ghost-btn {
     border: 1px solid #fff;
-    padding: 8px 22px;
-    border-radius: 3px;
-    transition: .3s;
+    background: rgba(255, 255, 255, 0);
+    color: #fff;
     &:hover {
         background: rgba(255, 255, 255, .1);
     }
@@ -102,6 +105,10 @@ nav {
         & a {
             color: #fff;
         }
+    }
+    & .ghost-btn {
+        font-size: .8rem;
+        padding: 8px 22px;
     }
 }
 
@@ -314,6 +321,34 @@ footer {
             border-radius: 50%;
             background: gray;
 
+        }
+        & .newsletter{
+            flex-grow: 2;
+        }
+        & button.btn.ghost-btn{
+            border-color: rgba(255, 255, 255, 0.3);
+            font-size: .8rem;
+
+        }
+        & input[type="text"]{
+            font-size: 1rem;
+            color: #fff;
+            border: 1px solid rgb(255, 255, 255);
+            font-weight: 200;
+            padding: 9px;
+            border-radius: 3px;
+            border: none;
+            width: 350px;
+            outline: none;
+            background: rgba(255, 255, 255, 0.05);
+
+            &:focus{
+                border: 1px solid rgba(255, 255, 255, 0.3);
+            }
+
+            &:placeholder{
+                opacity: .3;
+            }
         }
     }
     & .copywrite {

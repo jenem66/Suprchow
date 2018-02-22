@@ -29,16 +29,19 @@ p {
 
 .btn {
   font-size: 1rem;
+  line-height: 1.1rem;
+  font-family: "Lato", "Arial", sans-serif;
   font-weight: 200;
   padding: 10px 30px;
   border-radius: 3px;
   -webkit-transition: .3s;
   transition: .3s;
   border: none;
-  outline: none;
-  cursor: pointer; }
+  outline: none; }
   .btn a {
     color: #fff; }
+  .btn:hover {
+    cursor: pointer; }
 
 .btn-primary {
   background: #599c52; }
@@ -52,10 +55,8 @@ p {
 
 .ghost-btn {
   border: 1px solid #fff;
-  padding: 8px 22px;
-  border-radius: 3px;
-  -webkit-transition: .3s;
-  transition: .3s; }
+  background: rgba(255, 255, 255, 0);
+  color: #fff; }
   .ghost-btn:hover {
     background: rgba(255, 255, 255, 0.1); }
 
@@ -73,6 +74,9 @@ nav {
     margin-left: 20px; }
     nav ul li a {
       color: #fff; }
+  nav .ghost-btn {
+    font-size: .8rem;
+    padding: 8px 22px; }
 
 .search,
 .filter-categories {
@@ -234,6 +238,28 @@ footer {
     height: 50px;
     border-radius: 50%;
     background: gray; }
+  footer .footer-col .newsletter {
+    -webkit-box-flex: 2;
+        -ms-flex-positive: 2;
+            flex-grow: 2; }
+  footer .footer-col button.btn.ghost-btn {
+    border-color: rgba(255, 255, 255, 0.3);
+    font-size: .8rem; }
+  footer .footer-col input[type="text"] {
+    font-size: 1rem;
+    color: #fff;
+    border: 1px solid white;
+    font-weight: 200;
+    padding: 9px;
+    border-radius: 3px;
+    border: none;
+    width: 350px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.05); }
+    footer .footer-col input[type="text"]:focus {
+      border: 1px solid rgba(255, 255, 255, 0.3); }
+    footer .footer-col input[type="text"]:placeholder {
+      opacity: .3; }
   footer .copywrite {
     display: block;
     border-top: 1px solid rgba(255, 255, 255, 0.05);
