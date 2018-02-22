@@ -38,11 +38,21 @@
       <h1>Suprchow</h1>
     </div>
     <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Contact</a></li>
-      <li><a href="#">Login</a></li>
-      <li class="ghost-btn"><a href="#">Sign Up</a></li>
+      <li>
+        <a href="#">Home</a>
+      </li>
+      <li>
+        <a href="#">About</a>
+      </li>
+      <li>
+        <a href="#">Contact</a>
+      </li>
+      <li>
+        <a href="#">Login</a>
+      </li>
+      <li class="ghost-btn">
+        <a href="#">Sign Up</a>
+      </li>
     </ul>
 
   </nav>
@@ -62,43 +72,45 @@
         </form>
       </div>
     </section>
+  </div>
+  <!--===== Filter =====-->
 
-    <!--===== Filter =====-->
-
-    <section class="filter-categories">
-      <h2 class="location">Raleigh, North Carolina</h2>
-      <div class="tab-categories">
-        <ul>
-          <li class="active">
-            <a href="#">Top Searched</a>
-          </li>
-          <li>
-            <a href="#"> Highest Ratings</a>
-          </li>
-          <li>
-            <a href="#">Unique Finds</a>
-          </li>
-        </ul>
-      </div>
-    </section>
+  <section class="filter-categories">
+    <h2 class="location">Raleigh, North Carolina</h2>
+    <div class="tab-categories">
+      <ul>
+        <li class="active">
+          <a href="#">Top Searched</a>
+        </li>
+        <li>
+          <a href="#"> Highest Ratings</a>
+        </li>
+        <li>
+          <a href="#">Unique Finds</a>
+        </li>
+      </ul>
+    </div>
+  </section>
 
 
-    <!--==================================================
+  <!--==================================================
     FEATURED LISTINGS
     ===================================================-->
 
-    <section class="featured-listings">
+  <section class="featured-listings">
+    <div class="container">
+      
+      <div class="card-listings">
+        <!--===== Listing 1 =====-->
 
-      <!--===== Listing 1 =====-->
-
-      <div class="featured-listings">
         <div class="restaurant-card">
           <div class="card-header">
+            <img src="http://res.cloudinary.com/jenelle-miller/image/upload/v1518632582/tupelo-cafe_a7buc9.png" alt="tupelo">
+          </div>
+          <div class="card-body">
             <div class="favorite-btn">
               <i class="fas fa-heart"></i>
             </div>
-          </div>
-          <div class="card-body">
             <h1>
               <a href="#">Tupelo Honey Cafe</a>
             </h1>
@@ -124,20 +136,54 @@
             </div>
           </div>
         </div>
-      </div>
 
-      <!--===== Listing 2 =====-->
+        <!--===== Listing 2 =====-->
 
-      <div class="featured-listings">
         <div class="restaurant-card">
           <div class="card-header">
+            <img src="images/j-alexanders.jpg" alt="tupelo">
+          </div>
+          <div class="card-body">
             <div class="favorite-btn">
               <i class="fas fa-heart"></i>
             </div>
+            <h1>
+              <a href="#">J. Alexanders</a>
+            </h1>
+            <p>Raleigh, North Carolina</p>
+            <div class="rating">
+              <ul>
+                <li>
+                  <i class="fas fa-star"></i>
+                </li>
+                <li>
+                  <i class="fas fa-star"></i>
+                </li>
+                <li>
+                  <i class="fas fa-star"></i>
+                </li>
+                <li>
+                  <i class="fas fa-star"></i>
+                </li>
+                <li>
+                  <i class="far fa-star"></i>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!--===== Lising 3=====-->
+        <div class="restaurant-card">
+          <div class="card-header">
+            <img src="images/margaux.jpg" alt="tupelo">
           </div>
           <div class="card-body">
+            <div class="favorite-btn">
+              <i class="fas fa-heart"></i>
+            </div>
             <h1>
-              <a href="#">Tupelo Honey Cafe</a>
+              <a href="#">Margaux's Restaurant</a>
             </h1>
             <p>Raleigh, North Carolina</p>
             <div class="rating">
@@ -163,48 +209,12 @@
         </div>
       </div>
 
-      <!--===== Lising 3=====-->
-      <div class="featured-listings">
-        <div class="restaurant-card">
-          <div class="card-header">
-            <div class="favorite-btn">
-              <i class="fas fa-heart"></i>
-            </div>
-          </div>
-          <div class="card-body">
-            <h1>
-              <a href="#">Tupelo Honey Cafe</a>
-            </h1>
-            <p>Raleigh, North Carolina</p>
-            <div class="rating">
-              <ul>
-                <li>
-                  <i class="fas fa-star"></i>
-                </li>
-                <li>
-                  <i class="fas fa-star"></i>
-                </li>
-                <li>
-                  <i class="fas fa-star"></i>
-                </li>
-                <li>
-                  <i class="fas fa-star"></i>
-                </li>
-                <li>
-                  <i class="far fa-star"></i>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
       <div class="btn btn-primary">
         <a href="#">View More</a>
       </div>
-    </section>
+    </div>
 
-
-  </div>
+  </section>
 
   <!--==================================================
   FOOTER
@@ -215,33 +225,53 @@
       <div class="footer-col">
         <h4>Overview</h4>
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a> </li>
-          <li><a href="#">Contact</a> </li>
+          <li>
+            <a href="#">Home</a>
+          </li>
+          <li>
+            <a href="#">About</a>
+          </li>
+          <li>
+            <a href="#">Contact</a>
+          </li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>Account</h4>
         <ul>
-          <li><a href="#">Login</a> </li>
-          <li><a href="#">Sign Up</a></li>
-          <li><a href="#">Saves</a></li>
+          <li>
+            <a href="#">Login</a>
+          </li>
+          <li>
+            <a href="#">Sign Up</a>
+          </li>
+          <li>
+            <a href="#">Saves</a>
+          </li>
         </ul>
       </div>
       <div class="footer-col social">
         <h4>Connect With Us</h4>
         <ul>
           <li class="youtube">
-            <a href="#"><i class="fab fa-youtube"></i></a> 
+            <a href="#">
+              <i class="fab fa-youtube"></i>
+            </a>
           </li>
           <li class="twitter">
-            <a href="#"><i class="fab fa-twitter"></i></a> 
+            <a href="#">
+              <i class="fab fa-twitter"></i>
+            </a>
           </li>
           <li class="facebook">
-            <a href="#"><i class="fab fa-facebook-f"></i></a> 
+            <a href="#">
+              <i class="fab fa-facebook-f"></i>
+            </a>
           </li>
           <li class="rss">
-            <a href="#"><i class="fas fa-rss"></i></a> 
+            <a href="#">
+              <i class="fas fa-rss"></i>
+            </a>
           </li>
         </ul>
       </div>
@@ -254,8 +284,8 @@
       </div>
     </div>
     <div class="copywrite">
-        SUPERCHOW copywrite 2016
-      </div>
+      SUPERCHOW copywrite 2016
+    </div>
   </footer>
 </body>
 

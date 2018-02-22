@@ -113,7 +113,6 @@ nav {
     text-align: center;
 }
 
-
 .search {
     color: #fff;
     text-align: center;
@@ -185,7 +184,7 @@ nav {
 }
 
 // FEATURED SECTION
-.featured-listings {
+.card-listings {
     height: 100%;
     display: flex;
     align-items: center;
@@ -200,16 +199,31 @@ nav {
 
 .restaurant-card {
     background: #fff;
+    width: 32%;
     height: 300px;
     border-radius: 10px;
     text-align: center;
     -webkit-box-shadow: 0px 15px 88px -37px rgba(0, 0, 0, 0.17);
     -moz-box-shadow: 0px 15px 88px -37px rgba(0, 0, 0, 0.17);
     box-shadow: 0px 15px 88px -37px rgba(0, 0, 0, 0.17);
+
+}
+
+.card-header {
+    height: 50%;
+    background: #000 center no-repeat;
     overflow: hidden;
+    img{
+        width: 100%;
+        background-size: cover;
+    }
 }
 
 .card-body {
+    padding: 24px;
+    font-family: $font-body;
+    font-size: .9rem;
+    position: relative;
     & h1{
         font-size: 1.1rem;
         line-height: 1.1rem;
@@ -222,20 +236,13 @@ nav {
     }
 }
 
-.card-header {
-    height: 50%;
-    background: #000 url(http://res.cloudinary.com/jenelle-miller/image/upload/v1518632582/tupelo-cafe_a7buc9.png) center no-repeat;
-    background-size: cover;
-    position: relative;
-}
-
 .favorite-btn {
     width: 50px;
     height: 50px;
     color: #fff;
     border-radius: 50%;
-    position: relative;
-    top: 124px;
+    position: absolute;
+    top: -26px;
     left: 24px;
     border: 2px solid #fff;
     background: $color-favorite;
@@ -247,12 +254,6 @@ nav {
         background: saturate($color-favorite, 25%);
         cursor: pointer;
     }
-}
-
-.card-body {
-    padding: 24px;
-    font-family: $font-body;
-    font-size: .9rem;
 }
 
 .rating ul {
@@ -274,6 +275,7 @@ footer {
     background: $dark-gray;
     font-size: .8rem;
     display: flex;
+    flex-flow: row;
     justify-content: space-between;
     padding: 32px;
     & a{
@@ -296,6 +298,6 @@ footer {
         }
     }
     & .copywrite {
-        display: block;
+        // display: block;
     }
 }
