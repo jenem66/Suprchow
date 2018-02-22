@@ -28,7 +28,7 @@ $dark-gray: #1f1e23;
 
 html,
 body {
-    background: #5B5B5C url(../images/coffee-header-bg.jpg) center no-repeat;
+    background: #1F1E23 url(../images/coffee-header-bg.jpg) center no-repeat;
     background-size: cover;
     height: 100%;
     font-family: $font-primary;
@@ -37,7 +37,7 @@ body {
 
 .container {
     margin: 0 auto;
-    width: 1140px;
+    max-width: 1140px;
 }
 
 a {
@@ -281,10 +281,13 @@ footer {
     background: $dark-gray;
     margin-top: 40px;
     font-size: .8rem;
-    display: flex;
-    flex-flow: row;
-    justify-content: space-between;
     padding: 32px;
+    & .footer-links{
+        display: block;
+        display: flex;
+        flex-flow: row;
+        justify-content: space-between;
+    }
     & a{
         color: $color-primary-text;
         transition: .3s;
@@ -303,8 +306,20 @@ footer {
             list-style: none;
             margin-bottom: 8px;
         }
+
+        & .social ul li {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: gray;
+
+        }
     }
     & .copywrite {
-        // display: block;
+        display: block;
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+        padding-top: 32px;
+        margin-top: 24px;
     }
-}
+} 

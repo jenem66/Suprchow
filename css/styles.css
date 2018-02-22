@@ -11,7 +11,7 @@
 
 html,
 body {
-  background: #5B5B5C url(../images/coffee-header-bg.jpg) center no-repeat;
+  background: #1F1E23 url(../images/coffee-header-bg.jpg) center no-repeat;
   background-size: cover;
   height: 100%;
   font-family: "Montserrat", "Arial", sans-serif;
@@ -19,7 +19,7 @@ body {
 
 .container {
   margin: 0 auto;
-  width: 1140px; }
+  max-width: 1140px; }
 
 a {
   text-decoration: none; }
@@ -202,17 +202,19 @@ footer {
   background: #1f1e23;
   margin-top: 40px;
   font-size: .8rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row;
-          flex-flow: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   padding: 32px; }
+  footer .footer-links {
+    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
   footer a {
     color: #636363;
     -webkit-transition: .3s;
@@ -226,5 +228,16 @@ footer {
   footer .footer-col li {
     list-style: none;
     margin-bottom: 8px; }
+  footer .footer-col .social ul li {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: gray; }
+  footer .copywrite {
+    display: block;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 32px;
+    margin-top: 24px; }
 
 /*# sourceMappingURL=styles.css.map */
