@@ -35,6 +35,15 @@ body {
     color: $color-primary-text;
 }
 
+body {
+    background: #1F1E23 url(../images/coffee-header-bg.jpg) center no-repeat;
+    background-size: cover;
+    height: 100%;
+    font-family: $font-primary;
+    color: $color-primary-text;
+    padding: 32px;
+}
+
 .container {
     margin: 0 auto;
     max-width: 1140px;
@@ -94,7 +103,6 @@ p {
 nav {
     display: flex;
     color: #fff;
-    padding: 32px;
     font-size: .8rem;
     & .logo {
         margin-right: auto;
@@ -288,7 +296,6 @@ footer {
     background: $dark-gray;
     margin-top: 40px;
     font-size: .8rem;
-    padding: 32px;
     & .footer-links{
         display: block;
         display: flex;
@@ -314,14 +321,6 @@ footer {
             margin-bottom: 8px;
         }
 
-        & .social ul li {
-            display: inline-block;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background: gray;
-
-        }
         & .newsletter{
             flex-grow: 2;
         }
@@ -350,11 +349,62 @@ footer {
                 opacity: .3;
             }
         }
+        & .youtube a,
+        .twitter a,
+        .facebook a,
+        .rss a{
+            color: #fff;
+        }
+
+        & li.youtube,
+        li.twitter,
+        li.facebook,
+        li.rss{
+            display: inline-block;
+            width: 32px;
+            height: 32px;
+            color: #fff;
+            border-radius: 50%;
+            text-align: center;
+            padding-top:8px;
+            margin-right: 8px;
+            cursor: pointer;
+            transition: .3s;
+        }
+        
+        & li.youtube{
+            background: #EE6B53;
+            &:hover{
+                background: saturate(#EE6B53, 35%);
+            }
+        }
+
+        & li.twitter{
+            background: #62CEF5;
+            &:hover{
+                background: saturate(#62CEF5, 75%);
+            }
+        }
+
+        & li.facebook{
+            background: #507ABF;
+            &:hover{
+                background: saturate(#507ABF, 15%);
+            }
+        }
+        & li.rss{
+            background: #F8921E;
+            &:hover{
+                background: saturate(#F8921E, 80%);
+            }
+        }
+
+
     }
     & .copyrite {
         display: block;
         border-top: 1px solid rgba(255, 255, 255, 0.05);
-        padding-top: 32px;
+        padding: 32px 0;
         margin-top: 24px;
     }
 } 

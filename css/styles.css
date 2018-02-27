@@ -17,6 +17,14 @@ body {
   font-family: "Montserrat", "Arial", sans-serif;
   color: #636363; }
 
+body {
+  background: #1F1E23 url(../images/coffee-header-bg.jpg) center no-repeat;
+  background-size: cover;
+  height: 100%;
+  font-family: "Montserrat", "Arial", sans-serif;
+  color: #636363;
+  padding: 32px; }
+
 .container {
   margin: 0 auto;
   max-width: 1140px; }
@@ -65,7 +73,6 @@ nav {
   display: -ms-flexbox;
   display: flex;
   color: #fff;
-  padding: 32px;
   font-size: .8rem; }
   nav .logo {
     margin-right: auto; }
@@ -205,8 +212,7 @@ nav {
 footer {
   background: #1f1e23;
   margin-top: 40px;
-  font-size: .8rem;
-  padding: 32px; }
+  font-size: .8rem; }
   footer .footer-links {
     display: block;
     display: -webkit-box;
@@ -232,12 +238,6 @@ footer {
   footer .footer-col li {
     list-style: none;
     margin-bottom: 8px; }
-  footer .footer-col .social ul li {
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background: gray; }
   footer .footer-col .newsletter {
     -webkit-box-flex: 2;
         -ms-flex-positive: 2;
@@ -260,10 +260,46 @@ footer {
       border: 1px solid rgba(255, 255, 255, 0.3); }
     footer .footer-col input[type="text"]:placeholder {
       opacity: .3; }
+  footer .footer-col .youtube a,
+  footer .footer-col .twitter a,
+  footer .footer-col .facebook a,
+  footer .footer-col .rss a {
+    color: #fff; }
+  footer .footer-col li.youtube,
+  footer .footer-col li.twitter,
+  footer .footer-col li.facebook,
+  footer .footer-col li.rss {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    padding-top: 8px;
+    margin-right: 8px;
+    cursor: pointer;
+    -webkit-transition: .3s;
+    transition: .3s; }
+  footer .footer-col li.youtube {
+    background: #EE6B53; }
+    footer .footer-col li.youtube:hover {
+      background: #ff5f42; }
+  footer .footer-col li.twitter {
+    background: #62CEF5; }
+    footer .footer-col li.twitter:hover {
+      background: #58d3ff; }
+  footer .footer-col li.facebook {
+    background: #507ABF; }
+    footer .footer-col li.facebook:hover {
+      background: #3e76d1; }
+  footer .footer-col li.rss {
+    background: #F8921E; }
+    footer .footer-col li.rss:hover {
+      background: #ff9217; }
   footer .copyrite {
     display: block;
     border-top: 1px solid rgba(255, 255, 255, 0.05);
-    padding-top: 32px;
+    padding: 32px 0;
     margin-top: 24px; }
 
 /*# sourceMappingURL=styles.css.map */
